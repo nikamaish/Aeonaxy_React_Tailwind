@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Description from './components/Description/Description';
 import Interest from './components/Interest/Interest';
 import RightPlace from './components/RightPlace/RightPlace';
+import Comfort from './components/Comfort/Comfort';
+import WayPage from './components/WayPage/WayPage';
+import LearningPath from './components/LearningPath/LearningPath';
 
 function App() {
   return (
@@ -11,6 +14,11 @@ function App() {
         <Route path="/" element={<Description />} />
         <Route path="/interest" element={<Interest />} />
         <Route path='/rightplace' element={<RightPlace/>}></Route>
+        <Route path='/waypage' element={<WayPage/>}></Route>
+        <Route path='/comfort' element={<Comfort/>}></Route>
+        <Route path='/learningpath' element={<LearningPath/>}></Route>
+
+
       </Routes>
     </Router>
   );
