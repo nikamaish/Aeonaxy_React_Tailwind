@@ -35,23 +35,21 @@ const Description = () => {
     ];
 
     return (
-        
-            <div className="text-center">
-                <h2 className="text-2xl font-bold text-gray-800 mt-2">Which describes you best?</h2>
-                <h3 className='text-gray-600 mt-2'>This will help us personalize your experience</h3>
+        <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-800 mt-2">Which describes you best?</h2>
+            <h3 className='text-gray-600 mt-2'>This will help us personalize your experience.</h3>
 
-                <div className="flex flex-col h-screen  items-center mt-12">
-                    {personalData.map((data, index) => (
-                        <div key={data.id} className=" flex items-center border border-gray-300 rounded-md  px-8 mb-4 w-full md:w-1/2 text-gray-800">
-                            <img src={data.image} alt="vector image" width={60} height={20} className='mr-5'/>
-                            {data.title}
-                        </div>
-                    ))}
-                </div>
-
-                <button>Continue</button>
+            <div className="flex flex-col items-center mt-12">
+                {personalData.map((data, index) => (
+                    <div key={data.id} className="flex items-center border border-gray-300 rounded-md  mb-4 w-full md:w-1/2 text-gray-800 cursor-pointer hover:border-golden">
+                        <img src={data.image} alt="vector image" width={60} height={20} className='mr-5'/>
+                        {data.title}
+                    </div>
+                ))}
             </div>
-      
+
+            <button className='bg-black text-white p-2 px-10 rounded-md mt-4'>Continue</button>
+        </div>
     );
 }
 
