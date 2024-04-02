@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGlobe, faChartLine } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 const Interest = () => {
     const personalData = [
@@ -52,7 +52,7 @@ const Interest = () => {
                 ))}
             </div>
 
-            <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox}>Continue</button>
+            <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox}><Link to='/rightplace'>Continue</Link></button>
         </div>
     );
 }
