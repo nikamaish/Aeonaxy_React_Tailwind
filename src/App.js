@@ -26,8 +26,8 @@ function App() {
           <Route path='/rightplace' element={<RightPlace updateProgress={updateProgress} />} />
           <Route path='/waypage' element={<WayPage updateProgress={updateProgress} />} />
           <Route path='/comfort' element={<Comfort updateProgress={updateProgress} />} />
-          <Route path='/learningpath' element={<LearningPath updateProgress={updateProgress} />} />
-          <Route path='/recommendation' element={<Recommendation updateProgress={updateProgress} />} />
+          <Route path='/learningpath' element={<LearningPath />} />
+          <Route path='/recommendation' element={<Recommendation  />} />
         </Routes>
       </div>
     </Router>

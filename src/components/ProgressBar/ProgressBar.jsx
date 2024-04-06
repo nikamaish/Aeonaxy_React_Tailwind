@@ -1,8 +1,9 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faLessThan } from '@fortawesome/free-solid-svg-icons';
 
-
-const ProgressBar = ({ totalSteps }) => {
+const ProgressBar = () => {
   const location = useLocation();
   let progress = 0;
 
@@ -27,16 +28,24 @@ const ProgressBar = ({ totalSteps }) => {
       progress = 0;
   }
 
-  // Define a style object to dynamically adjust the width of the green fill portion
-  const progressStyle = {
-    width: `${progress}%`,
-    backgroundColor: '#6EE7B7', // Green color
-    transition: 'width 0.5s ease-in-out', // Smooth transition animation
-  };
+  // Render null if the location is after '/learningpath' or '/recommendation'
+  if (location.pathname === '/learningpath' || location.pathname === '/recommendation') {
+    return null;
+  }
 
   return (
-    <div className="h-2 bg-gray-200 mt-5">
-      <div className="h-full" style={progressStyle}></div>
+    <div className="flex items-center justify-between px-4 mt-4">
+      <Link to="#" className="text-gray-500" onClick={() => window.history.back()}>
+       
+       <FontAwesomeIcon icon={faLessThan} className=' mr-2 text-xl'/> 
+        
+      </Link>
+      <div className="h-2 bg-gray-200 flex-grow    rounded-full overflow-hidden">
+        <div
+          className="h-full bg-green-500 transition-width duration-500 ease-in-out"
+          style={{ width: `${progress}%` }} // Adjusted width to make it narrower
+        ></div>
+      </div>
     </div>
   );
 };
