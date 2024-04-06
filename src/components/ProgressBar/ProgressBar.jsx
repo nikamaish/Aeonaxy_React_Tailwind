@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ProgressBar = ({ totalSteps }) => {
@@ -21,11 +21,18 @@ const ProgressBar = ({ totalSteps }) => {
       break;
     default:
       progress = 0;
-    }
+  }
+
+  // Define a style object to dynamically adjust the width of the green fill portion
+  const progressStyle = {
+    width: `${progress}%`,
+    backgroundColor: '#6EE7B7', // Green color
+    transition: 'width 0.5s ease-in-out', // Smooth transition animation
+  };
 
   return (
     <div className="h-4 bg-gray-200">
-      <div className={`h-full bg-blue-500 transition-all duration-500 ease-in-out w-${progress}%`}></div>
+      <div className="h-full" style={progressStyle}></div>
     </div>
   );
 };

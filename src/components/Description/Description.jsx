@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-const Description = () => {
+const Description = ({ updateProgress }) => {
     const personalData = [
         {
             id: 1,
@@ -41,6 +40,15 @@ const Description = () => {
         setSelectedBox(id);
     };
 
+    const handleContinue = () => {
+        if (selectedBox !== null) {
+            // Update progress (for example, moving to the next step increases progress by 25%)
+            const newProgress = 25;
+            updateProgress(newProgress);
+            // Navigate to the next page
+            window.location.href = '/interest'; // This will navigate to the "/interest" route
+        }
+    };
 
     return (
         <div className="text-center mx-4">
@@ -56,9 +64,9 @@ const Description = () => {
                 ))}
             </div>
 
-            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} >
-        <Link to='/interest'>Continue</Link>
-        </button>   
+            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} onClick={handleContinue}>
+                Continue
+            </button>   
         </div>
     );
 }
