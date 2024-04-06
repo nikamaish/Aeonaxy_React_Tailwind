@@ -37,25 +37,27 @@ const Comfort = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen">
-      <h1 className="text-2xl font-bold text-gray-800 mt-2">What is your math comfort level?</h1>
-      <h3 className='text-gray-600 mt-2'>Choose the highest level you feel confident in &mdash;&nbsp;you can always adjust later.</h3>
+      <h1 className="text-2xl font-bold text-gray-800 mt-2 text-center">What is your math comfort level?</h1>
+      <h3 className='text-gray-600 mt-2 text-center'>Choose the highest level you feel confident in &mdash; you can always adjust later.</h3>
 
-      <div className="flex gap-4 text-center mt-10 cursor-pointer">
+      <div className="flex flex-wrap justify-center gap-4 mt-10">
         {comfortLevels.map((level) => (
          <div
-         key={level.id}
-         className={`flex-grow p-4 border rounded-lg ${selectedBox === level.id ? 'border-golden' : 'border-gray-300'}`}
-         onClick={() => handleBoxClick(level.id)}
-       >
-       
-            <img src={level.equation} alt="equation" className="h-36 w-36 object-contain" />
-            <h3 className="text-md">{level.topic}</h3>
-            <p className='text-gray-500'>{level.level}</p>
+           key={level.id}
+           className={`flex flex-col p-4 border rounded-lg ${selectedBox === level.id ? 'border-golden' : 'border-gray-300'}`}
+           onClick={() => handleBoxClick(level.id)}
+           style={{ maxWidth: '300px' }}
+         >
+            <img src={level.equation} alt="equation" className="h-36 w-36 object-contain mx-auto" />
+            <h3 className="text-md text-center">{level.topic}</h3>
+            <p className='text-gray-500 text-center'>{level.level}</p>
           </div>
         ))}
       </div>
 
-      <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-8 ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} ><Link to='/waypage'>Continue</Link></button>
+      <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-8 ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} >
+        <Link to='/waypage'>Continue</Link>
+      </button>
     </div>
   );
 }
