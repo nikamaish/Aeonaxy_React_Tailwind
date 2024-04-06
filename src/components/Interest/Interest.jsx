@@ -52,7 +52,7 @@ const Interest = () => {
                 ))}
             </div>
 
-            <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox}><Link to='/rightplace'>Continue</Link></button>
+            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox}><Link to='/rightplace'>Continue</Link></button>
         </div>
     );
 }

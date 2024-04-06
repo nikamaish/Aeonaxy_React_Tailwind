@@ -56,7 +56,7 @@ const Description = ({ continueHandler }) => {
                 ))}
             </div>
 
-            <button className={`bg-black text-white p-2 px-10 mb-2 rounded-md mt-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} > <Link to='/interest'>Continue</Link></button>
+            <button className={`bg-black text-white p-2 px-10  rounded-md my-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} > <Link to='/interest'>Continue</Link></button>
         </div>
     );
 }
