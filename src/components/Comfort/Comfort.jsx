@@ -40,7 +40,7 @@ const Comfort = () => {
       <h1 className="text-2xl font-bold text-gray-800 mt-2 text-center">What is your math comfort level?</h1>
       <h3 className='text-gray-600 mt-2 text-center'>Choose the highest level you feel confident in &mdash; you can always adjust later.</h3>
 
-      <div className="flex flex-wrap justify-center gap-4 mt-10">
+      <div className="flex flex-wrap justify-center  gap-4 cursor-pointer mt-10">
         {comfortLevels.map((level) => (
          <div
            key={level.id}
