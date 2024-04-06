@@ -1,7 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom"; 
 
-const RightPlace = () => {
+const RightPlace = ({updateProgress}) => {
+
+  const navigate = useNavigate();
+  
+  const handleContinue = () => {
+        navigate('/comfort');
+    
+};
+
   return (
     <div className="flex flex-col justify-center items-center h-screen">
       <div className="w-full flex flex-col lg:flex-row justify-center items-center">
@@ -21,7 +30,7 @@ const RightPlace = () => {
       </div>
 
       <div className="mt-4">
-      <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4"><Link to='/comfort'>Continue</Link></button>
+      <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4" onClick={handleContinue}><Link to='/comfort'>Continue</Link></button>
       </div>
     </div>
   );

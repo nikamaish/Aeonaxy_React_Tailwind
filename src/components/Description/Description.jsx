@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
+import { useNavigate } from "react-router-dom";  
 
 const Description = ({ updateProgress }) => {
     const personalData = [
@@ -35,6 +36,7 @@ const Description = ({ updateProgress }) => {
     ];
 
     const [selectedBox, setSelectedBox] = useState(null);
+    const navigate = useNavigate();
 
     const handleBoxClick = (id) => {
         setSelectedBox(id);
@@ -43,10 +45,11 @@ const Description = ({ updateProgress }) => {
     const handleContinue = () => {
         if (selectedBox !== null) {
             // Update progress (for example, moving to the next step increases progress by 25%)
-            const newProgress = 25;
+            const newProgress = 20;
             updateProgress(newProgress);
             // Navigate to the next page
-            window.location.href = '/interest'; // This will navigate to the "/interest" route
+            
+            navigate('/interest');
         }
     };
 

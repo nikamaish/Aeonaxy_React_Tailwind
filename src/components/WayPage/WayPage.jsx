@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
@@ -11,6 +11,12 @@ const WayPage = () => {
           <FontAwesomeIcon key={index} icon={faStar} className="text-yellow-500 text-2xl mx-1" />
         ));
     };
+
+    const navigate = useNavigate(); 
+
+    const handleContinue =()=>{
+        navigate ('/learningpath')
+    }
     
     return (
         <div className="flex flex-col justify-center items-center h-screen">
@@ -35,7 +41,7 @@ const WayPage = () => {
             </div>
 
             <div className="mt-4">
-            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4"><Link to='/learningpath'>Continue</Link></button>
+            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4" onClick={handleContinue}>Continue</button>
             </div>
         </div>
     );

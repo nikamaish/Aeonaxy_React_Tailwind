@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-const Comfort = () => {
+
+const Comfort = ({updateProgress}) => {
   const comfortLevels = [
     {
       id: 0,
@@ -30,10 +31,22 @@ const Comfort = () => {
   ];
 
   const [selectedBox, setSelectedBox] = useState(null);
+  const navigate = useNavigate();
 
   const handleBoxClick = (id) => {
     setSelectedBox(id);
   };
+
+  const handleContinue = () => {
+    if (selectedBox !== null) {
+        // Update progress (for example, moving to the next step increases progress by 25%)
+        const newProgress = 20;
+        updateProgress(newProgress);
+        // Navigate to the next page
+        
+        navigate('/waypage');
+    }
+};
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen mx-2">
@@ -55,8 +68,8 @@ const Comfort = () => {
         ))}
       </div>
 
-      <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} >
-      <Link to='/waypage'> Continue</Link>
+      <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} onClick={handleContinue} >
+       Continue
       </button>
     </div>
   );

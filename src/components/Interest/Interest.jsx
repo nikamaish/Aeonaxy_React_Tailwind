@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";  
 
 
-const Interest = () => {
+const Interest = (updateProgress) => {
     const personalData = [
         {
             id: 1,
@@ -32,10 +33,23 @@ const Interest = () => {
     ];
 
     const [selectedBox, setSelectedBox] = useState(null);
+    const navigate = useNavigate();
+
 
     const handleBoxClick = (id) => {
         setSelectedBox(id);
     };
+    const handleContinue = () => {
+        if (selectedBox !== null) {
+            // Update progress (for example, moving to the next step increases progress by 25%)
+            const newProgress = 20;
+            updateProgress(newProgress);
+            // Navigate to the next page
+            
+            navigate('/rightplace');
+        }
+    };
+
 
     return (
         <div className="text-center mx-4">
