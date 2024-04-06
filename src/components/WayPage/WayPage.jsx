@@ -35,7 +35,7 @@ const WayPage = () => {
             </div>
 
             <div className="mt-4">
-            <Link to='/learningpath'><button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4">Continue</button></Link>
+            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4"><Link to='/learningpath'>Continue</Link></button>
             </div>
         </div>
     );

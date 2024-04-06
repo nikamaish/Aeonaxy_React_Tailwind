@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Description = ({ continueHandler }) => {
+const Description = () => {
     const personalData = [
         {
             id: 1,
@@ -56,7 +56,9 @@ const Description = ({ continueHandler }) => {
                 ))}
             </div>
 
-            <Link to='/interest'> <button className={`bg-black text-white p-2 px-10  rounded-md my-4 ${selectedBox ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} > Continue</button></Link>
+            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} >
+        <Link to='/interest'>Continue</Link>
+        </button>   
         </div>
     );
 }

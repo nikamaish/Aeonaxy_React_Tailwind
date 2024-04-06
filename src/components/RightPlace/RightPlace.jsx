@@ -21,7 +21,7 @@ const RightPlace = () => {
       </div>
 
       <div className="mt-4">
-      <Link to='/comfort'><button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4">Continue</button></Link>
+      <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4"><Link to='/comfort'>Continue</Link></button>
       </div>
     </div>
   );
