@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faLessThan } from '@fortawesome/free-solid-svg-icons';
+import {  faLessThan } from '@fortawesome/free-solid-svg-icons';
 
 const ProgressBar = () => {
   const location = useLocation();
