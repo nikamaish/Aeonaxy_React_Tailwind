@@ -67,8 +67,8 @@ const Interest = (updateProgress) => {
             </div>
 
                 
-            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} >
-        <Link to='/rightplace'>Continue</Link>
+            <button className={`bg-black text-white p-2 px-10 my-4 rounded-md  ${selectedBox !== null ? '' : 'pointer-events-none opacity-50'}`} disabled={!selectedBox} onClick={handleContinue} >
+        Continue
       </button>
         </div>
     );
