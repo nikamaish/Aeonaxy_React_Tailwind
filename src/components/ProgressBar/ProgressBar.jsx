@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {  faLessThan } from '@fortawesome/free-solid-svg-icons';
+import { faLessThan } from '@fortawesome/free-solid-svg-icons';
 
 const ProgressBar = () => {
   const location = useLocation();
@@ -33,16 +33,19 @@ const ProgressBar = () => {
     return null;
   }
 
+  // Render the back button only if not on the first page
+  const backButton = location.pathname !== '/' ? (
+    <Link to="#" className="text-gray-500" onClick={() => window.history.back()}>
+      <FontAwesomeIcon icon={faLessThan} className='mr-2 text-xl'/> 
+    </Link>
+  ) : null;
+
   return (
-    <div className="flex items-center justify-between px-4 mt-4">
-      <Link to="#" className="text-gray-500" onClick={() => window.history.back()}>
-       
-       <FontAwesomeIcon icon={faLessThan} className=' mr-2 text-xl'/> 
-        
-      </Link>
-      <div className="h-2 bg-gray-200 flex-grow    rounded-full overflow-hidden">
+    <div className="flex items-center justify-between px-24 mt-12">
+      {backButton}
+      <div className="h-1 bg-gray-200  flex-grow rounded-full overflow-hidden">
         <div
-          className="h-full bg-green-500 transition-width duration-500 ease-in-out"
+          className="h-full bg-green-600  transition-width duration-500 ease-in-out"
           style={{ width: `${progress}%` }} // Adjusted width to make it narrower
         ></div>
       </div>

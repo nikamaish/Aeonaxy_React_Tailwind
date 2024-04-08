@@ -23,15 +23,15 @@ const RightPlace = ({updateProgress}) => {
             className="w-96 h-96"
           />
         </div>
-        <div className="p-4 flex flex-col justify-center items-left lg:flex-1">
+        <div className="p-4 flex flex-col justify-center items-left lg:flex-1  ">
           <h1 className="text-center lg:text-left text-xl font-bold mb-2 mb-2">You're in the right place</h1>
-          <p className='text-center lg:text-left'>Brilliant gets you hands-on to help improve your professional skills and knowledge. You'll interact with concepts and solve fun problems in math, science, and computer science.</p>
+          <p className='text-center lg:text-left '>Brilliant gets you hands-on to help improve your professional skills and knowledge. You'll interact with concepts and solve fun problems in math, science, and computer science.</p>
         </div>
       </div>
 
-      <div className="mt-4">
-      <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4" onClick={handleContinue}><Link to='/comfort'>Continue</Link></button>
-      </div>
+      
+      <button className="bg-black text-white p-2 px-10 mb-2 rounded-md " onClick={handleContinue}><Link to='/comfort'>Continue</Link></button>
+      
     </div>
   );
 }

@@ -19,7 +19,7 @@ const WayPage = () => {
     }
     
     return (
-        <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col justify-start items-center h-screen mt-10">
             <div className="w-full flex flex-col lg:flex-row justify-center items-center">
                 <div className="p-4 flex justify-center items-center lg:flex-1">
                     <video
@@ -27,7 +27,7 @@ const WayPage = () => {
                         autoPlay
                         loop
                         muted
-                        className="w-64 lg:w-96 h-auto"
+                        className="w-64 lg:w-72 h-auto"
                     />
                 </div>
                 <div className="p-4 flex flex-col justify-center items-left lg:flex-1">
@@ -40,9 +40,9 @@ const WayPage = () => {
                 </div>
             </div>
 
-            <div className="mt-4">
-            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md mt-4" onClick={handleContinue}>Continue</button>
-            </div>
+            
+            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md " onClick={handleContinue}>Continue</button>
+            
         </div>
     );
 }
