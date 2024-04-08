@@ -13,3 +13,28 @@ Tailwind CSS: Integrates Tailwind CSS, a utility-first CSS framework for buildin
 ## Prerequisites
 - Node.js installed on your local machine.
 - npm or yarn package manager installed globally.
+
+
+## Installation
+
+- Clone the repository:
+```bash
+  git clone https://github.com/nikamaish/Aeonaxy_React_Tailwind.git
+```
+
+- Install dependencies:
+```bash
+npm install
+# or
+yarn
+```
+
+- Running the Application
+To start the development server, run:
+```bash
+npm start
+# or
+yarn start
+```
+
+Open http://localhost:3000 to view it in the browser.
