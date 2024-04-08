@@ -41,7 +41,7 @@ const WayPage = () => {
             </div>
 
             
-            <button className="bg-black text-white p-2 px-10 mb-2 rounded-md " onClick={handleContinue}>Continue</button>
+            <button className="bg-black text-white p-2 px-10 mt-6 mb-2 rounded-md " onClick={handleContinue}>Continue</button>
             
         </div>
     );
