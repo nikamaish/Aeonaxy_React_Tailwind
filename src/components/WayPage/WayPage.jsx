@@ -31,7 +31,7 @@ const WayPage = () => {
                     />
                 </div>
                 <div className="p-4 flex flex-col justify-center items-left lg:flex-1">
-                    <h1 className="text-center lg:text-left text-xl font-bold mb-2 mb-2  ">You're on your way!</h1>
+                    <h1 className="text-center text-2xl md:text-3xl lg:text-left  font-bold mb-2 mb-2  ">You're on your way!</h1>
                     <div className="flex justify-center lg:justify-start my-5">
                         {renderStars()}
                     </div>

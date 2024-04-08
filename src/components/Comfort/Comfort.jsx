@@ -50,7 +50,7 @@ const Comfort = ({updateProgress}) => {
 
   return (
     <div className="flex flex-col justify-start items-center min-h-screen mx-2 mt-10">
-      <h1 className="text-2xl font-bold text-gray-800  text-center">What is your math comfort level?</h1>
+      <h1 className="text-2xl md:text-3xl font-bold text-gray-800  text-center">What is your math comfort level?</h1>
       <h3 className='text-gray-600 mt-2 text-center mt-6'>Choose the highest level you feel confident in &mdash; you can always adjust later.</h3>
 
       <div className="flex flex-wrap justify-center gap-4 cursor-pointer mt-10">

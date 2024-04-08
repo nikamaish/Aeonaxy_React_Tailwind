@@ -41,11 +41,11 @@ const ProgressBar = () => {
   ) : null;
 
   return (
-    <div className="flex items-center justify-between px-24 mt-12">
+    <div className="flex items-center justify-between px-8 lg:px-24 mt-12">
       {backButton}
-      <div className="h-1 bg-gray-200  flex-grow rounded-full overflow-hidden">
+      <div className="h-1 bg-gray-200 flex-grow lg:w-1/2 rounded-full overflow-hidden">
         <div
-          className="h-full bg-green-600  transition-width duration-500 ease-in-out"
+          className="h-full bg-green-600 transition-width duration-500 ease-in-out"
           style={{ width: `${progress}%` }} // Adjusted width to make it narrower
         ></div>
       </div>

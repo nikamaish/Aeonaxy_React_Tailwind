@@ -55,7 +55,7 @@ const Description = ({ updateProgress }) => {
 
     return (
         <div className="text-center mx-4 mt-10">
-            <h2 className="text-2xl font-bold text-gray-800 ">Which describes you best?</h2>
+           <h2 className="font-bold text-gray-800 text-2xl md:text-3xl">Which describes you best?</h2>
             <h3 className='text-gray-600 mt-6'>This will help us personalize your experience.</h3>
 
             <div className="flex flex-col items-center mt-12 mx-4">

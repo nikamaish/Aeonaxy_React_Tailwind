@@ -9,7 +9,7 @@ const Recommendation = () => {
 
   return (
     <div className="flex flex-col justify-center items-center h-screen mx-6">
-      <h2 className="text-2xl font-bold text-gray-800 mt-2">Learning paths based on your answers</h2>
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">Learning paths based on your answers</h2>
       <h3 className='text-gray-600 mt-4'>Choose one to get started. You can switch anytime</h3>
 
       <div className="flex flex-col md:flex-row justify-center mt-12 gap-4 cursor-pointer">

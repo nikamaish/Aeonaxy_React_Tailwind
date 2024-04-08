@@ -52,7 +52,7 @@ const Interest = ({updateProgress}) => {
 
     return (
         <div className="text-center mx-4 mt-10">
-            <h2 className="text-2xl font-bold text-gray-800 mt-2">Which are you most interested in?</h2>
+           <h2 className="font-bold text-gray-800 text-2xl md:text-3xl mt-2">Which are you most interested in?</h2>
             <h3 className='text-gray-600 mt-6'>Choose just one. This will help us get you started (but won't limit your experience).</h3>
 
             <div className="flex flex-col items-center mt-12 mx-2">
