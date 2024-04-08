@@ -6,8 +6,8 @@ A multistep form provides a structured approach for users to navigate and select
 
 
 ## Feature
-React: Utilizes React, a JavaScript library for building user interfaces.
-Tailwind CSS: Integrates Tailwind CSS, a utility-first CSS framework for building custom designs quickly.
+- React: Utilizes React, a JavaScript library for building user interfaces.
+- Tailwind CSS: Integrates Tailwind CSS, a utility-first CSS framework for building custom designs quickly.
 
 
 ## Prerequisites
@@ -38,3 +38,15 @@ yarn start
 ```
 
 Open http://localhost:3000 to view it in the browser.
+
+
+- Building the Application
+To build the production-ready bundle, run:
+```bash
+npm run build
+# or
+yarn build
+```
+
+## Deployed Project Link
+[Link](https://multistep-form-aish.netlify.app/).
